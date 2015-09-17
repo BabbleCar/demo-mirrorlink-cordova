@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div ng-controller="TodoListController as todoList" class="app">
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+
+            <!-- CERTIFICATION -->
+            <p class="titre">Certification</p>
+                <button id="bt11" class="noactive">off CertificationStatusChanged</button>
+                <button id="bt12">getApplicationCertificationStatus</button>
+                <button id="bt13">getApplicationCertifyingEntities</button>
+                <input type="text" id="in14"/>
+                <button id="bt14">getApplicationCertificationInformation</button>
+
+            <!-- CONNECTION -->
+            <p class="titre">Connection</p>
+                <button id="bt21">isMirrorLinkSessionEstablished</button>
+                <button id="bt22" class="noactive">off MirrorLinkSessionChanged</button>
+                <button id="bt23">getAudioConnections</button>
+                <button id="bt24" class="noactive">off AudioConnectionsChanged</button>
+                <button id="bt25">getRemoteDisplayConnections</button>
+                <button id="bt26" class="noactive">off RemoteDisplayConnectionChanged</button>
+
+            <!-- CONTEXT -->
+            <p class="titre">Context</p>
+                <p class="sub-title">content</p>
+                <textarea rows="12" id="ta31">[
+{
+"APPLICATION_CATEGORY":131072,
+"CONTENT_CATEGORY":4,
+"RECT": {
+    "WIDTH":50,
+    "HEIGHT":60,
+    "X": 0,
+    "Y": 0
+}
+}
+]</textarea>
+                <p class="sub-title">handleBlocking</p>
+                <input type="checkbox" id="ck31"/>
+                <button id="bt31">setFramebufferContextInformation</button>
+                <button id="bt32" class="noactive">off onFramebufferBlocked</button>
+                <p class="sub-title">audioContent</p>
+                <input type="checkbox" id="ck33a"/>
+                <p class="sub-title">audioCategories</p>
+                <textarea rows="5" id="ta33">[
+196608,
+393216,
+524288
+]</textarea>
+                <p class="sub-title">handleBlocking</p>
+                <input type="checkbox" id="ck33b"/>
+                <button id="bt33">setAudioContextInformation</button>
+                <button id="bt34" class="noactive">off onAudioBlocked</button>
+                <button id="bt35" class="noactive">off onFramebufferUnblocked</button>
+                <button id="bt36" class="noactive">off onAudioUnblocked</button>
+
+            <!-- DATA SERVICE -->
+            <p class="titre">Data Service</p>
+                <button id="bt41">getAvailableServices</button>
+                <button id="bt42" class="noactive">off onAvailableServicesChanged</button>
+                <p class="sub-title">serviceId</p>
+                <input type="text" id="in43a"/>
+                <p class="sub-title">versionMajor</p>
+                <input type="text" id="in43b"/>
+                <p class="sub-title">versionMinor</p>
+                <input type="text" id="in43c"/>
+                <button id="bt43">registerToService</button>
+                <button id="bt44" class="noactive">off onRegisterForService</button>
+                <p class="sub-title">serviceId</p>
+                <input type="text" id="in45a"/>
+                <button id="bt45">unregisterFromService</button>
+                <p class="sub-title">serviceId</p>
+                <input type="text" id="in46a"/>
+                <p class="sub-title">objectId</p>
+                <input type="text" id="in46b"/>
+                <button id="bt46">subscribeObject</button>
+                <button id="bt47" class="noactive">off onSubscribeResponse</button>
+                <p class="sub-title">serviceId</p>
+                <input type="text" id="in48a"/>
+                <p class="sub-title">objectId</p>
+                <input type="text" id="in48b"/>
+                <button id="bt48">unsubscribeObject</button>
+                <p class="sub-title">serviceId</p>
+                <input type="text" id="in49a"/>
+                <p class="sub-title">objectId</p>
+                <input type="text" id="in49b"/>
+                <p class="sub-title">object</p>
+                <textarea rows="5" id="ta49a">[
+196608,
+393216,
+524288
+]</textarea>
+                <button id="bt49">setObject</button>
+                <button id="bt410" class="noactive">off onSetDataObjectResponse</button>
+                <p class="sub-title">serviceId</p>
+                <input type="text" id="in411a"/>
+                <p class="sub-title">objectId</p>
+                <input type="text" id="in411b"/>
+                <button id="bt411">getObject</button>
+                <button id="bt412" class="noactive">off onGetDataObjectResponse</button>
+
+            <!-- DATA INFO -->
+            <p class="titre">Data Info</p>
+                <button id="bt51">getMirrorLinkSessionVersionMajor</button>
+                <button id="bt52">getMirrorLinkSessionVersionMinor</button>
+                <button id="bt53">getMirrorLinkClientInformation</button>
+                <button id="bt54" class="noactive">off onDeviceInfoChanged</button>
+                <button id="bt55">getServerVirtualKeyboardSupport</button>
+
+            <!-- DEVICE STATUS -->
+            <p class="titre">Device Status</p>
+                <button id="bt61">isInDriveMode</button>
+                <button id="bt62" class="noactive">off onDriveModeChange</button>
+                <button id="bt63">isInNightMode</button>
+                <button id="bt64" class="noactive">off onNightModeChanged</button>
+                <button id="bt65">isMicrophoneOn</button>
+                <button id="bt66" class="noactive">off onMicrophoneStatusChanged</button>
+                <p class="sub-title">micInput</p>
+                <input type="text" id="in67a"/>
+                <p class="sub-title">voiceInput</p>
+                <input type="text" id="in67b"/>
+                <button id="bt67">setMicrophoneOpen</button>
+
+            <!--  DISPLAY -->
+            <p class="titre">Display</p>
+                <button id="bt71">getDisplayConfiguration</button>
+                <button id="bt72" class="noactive">off onDisplayConfigurationChanged</button>
+                <button id="bt73">getClientPixelFormat</button>
+                <button id="bt74" class="noactive">off onPixelFormatChanged</button>
+
+            <!--  Event Mapping -->
+            <p class="titre">Event Mapping</p>
+                <button id="bt81">getEventConfiguration</button>
+                <button id="bt82" class="noactive">off onEventConfigurationChanged</button>
+                <button id="bt83">getEventMappings</button>
+                <button id="bt84" class="noactive">off onEventMappingChanged</button>
+
+            <!--  Notification  -->
+            <p class="titre">Notification</p>
+                <button id="bt91">setNotificationSupported</button>
+                <button id="bt92">getNotificationEnabled</button>
+                <button id="bt93" class="noactive">off onNotificationEnabledChanged</button>
+                <button id="bt94">getNotificationConfiguration</button>
+                <button id="bt95" class="noactive">off onNotificationConfigurationChanged</button>
+                <button id="bt96">sendClientNotification</button>
+                <button id="bt97">sendVncNotification</button>
+                <button id="bt98">cancelNotification</button>
+                <button id="bt99" class="noactive">off onNotificationActionReceived</button>
+
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/mirrorlink.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+    </body>
+</html>

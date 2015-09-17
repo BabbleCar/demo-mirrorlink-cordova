@@ -1,0 +1,18 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-mirrorlink": {
+        "source": {
+            "type": "local",
+            "path": "/home/buse974/AndroidStudioProjects/Mirror/cordova-plugin-mirrorlink"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

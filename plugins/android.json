@@ -1,0 +1,89 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"com.mirrorlink.android.service.ACCESS_PERMISSION\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application/activity": [
+                        {
+                            "xml": "<intent-filter><action android:name=\"com.mirrorlink.android.app.TERMINATE\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<intent-filter><action android:name=\"com.mirrorlink.android.app.LAUNCH\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Api\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.Api\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Certification\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.Certification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Connection\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.Connection\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Context\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.Context\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DataServices\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.DataServices\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DeviceInfo\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.DeviceInfo\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DeviceStatus\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.DeviceStatus\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Display\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.Display\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"EventMapping\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.EventMapping\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"com.babblecar.mirrorlink.Notification\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-mirrorlink": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    },
+    "dependent_plugins": {}
+}
